@@ -2,19 +2,19 @@ import java.lang.*;
 import java.io.*;
 import java.util.*;
 class Solution {
-    public static void reverseString(String s) {
+    public static String reverseString(String s) {
         StringBuilder rev= new StringBuilder();
         rev.append(s);
         rev=rev.reverse();
-        System.out.println(rev);
         
+        return rev.toString();
     }
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System. in); 
         String input = scanner. nextLine();
       //  String input = "hello";
-        reverseString(input);
+       input= reverseString(input);
+        System.out.println(input);
     }
 }
-
