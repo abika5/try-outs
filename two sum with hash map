@@ -1,0 +1,28 @@
+class Solution {
+    public static int[] twoSum(int[] nums, int target) {
+       int n=nums.length;
+        Map<Integer,Integer> hash = new HashMap<Integer,Integer>();
+        for(int i=0; i<n ; i++){
+            hash.put(nums[i],i);
+        }
+            for(int i=0;i<n;i++){
+                int k = target - nums[i];
+                if(hash.containsKey(k)&& hash.get(k)!=i)
+                {
+                    return new int[] {i, hash.get(k)};
+                }
+            }
+        
+        return new int[2];
+        
+    }
+public static void main(String[] args) {
+
+    int nums[]= new int[]{2,5,7,12};
+    int target=13;
+    int result[] = twoSum(nums,target);
+    System.out.println(result[0]);
+    System.out.println(result[1]);
+}
+}
+
